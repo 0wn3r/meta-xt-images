@@ -11,6 +11,7 @@ PACKAGES_append = "\
     ${PN}-xenhypfs \
     ${PN}-xen-access \
     ${PN}-test \
+    ${PN}-init-dom0less \
     "
 
 FILES_${PN}-xenhypfs = "\
@@ -56,3 +57,7 @@ FILES_${PN}-test += "\
 # test-xenstore and test-resource currently only exist in 4.16
 # test-cpu-policy and test-tsx only exist in 4.16 for x86
 ALLOW_EMPTY_${PN}-test = "1"
+
+FILES_${PN}-init-dom0less += "\
+    ${libdir}/xen/bin/init-dom0less \
+    "
